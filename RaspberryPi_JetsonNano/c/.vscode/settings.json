@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "time.h": "c",
+        "epd_test.h": "c",
+        "epd_2in7_v2.h": "c"
+    }
+}
