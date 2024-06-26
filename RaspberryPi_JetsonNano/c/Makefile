@@ -5,7 +5,7 @@ DIR_GUI		 = ./lib/GUI
 DIR_Examples = ./examples
 DIR_BIN		 = ./bin
 
-EPD = NULL
+EPD = epd2in7V2
 ifeq ($(EPD), epd1in64g)
 	OBJ_C_EPD = ${DIR_EPD}/EPD_1in64g.c
 	OBJ_C_Examples = ${DIR_Examples}/EPD_1in64g_test.c
@@ -211,10 +211,10 @@ JETSON_DEV_C = $(wildcard $(DIR_BIN)/sysfs_software_spi.o $(DIR_BIN)/sysfs_gpio.
 
 DEBUG = -D DEBUG
 
-# USELIB_RPI = USE_BCM2835_LIB
-# USELIB_RPI = USE_WIRINGPI_LIB
-USELIB_RPI = USE_LGPIO_LIB
-# USELIB_RPI = USE_DEV_LIB
+#USELIB_RPI = USE_BCM2835_LIB
+#USELIB_RPI = USE_WIRINGPI_LIB
+#USELIB_RPI = USE_LGPIO_LIB
+USELIB_RPI = USE_DEV_LIB
 
 LIB_RPI=-Wl,--gc-sections
 ifeq ($(USELIB_RPI), USE_BCM2835_LIB)
